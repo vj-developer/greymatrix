@@ -12,6 +12,7 @@ import DigitalBenefits from './components/Sections/DigitalBenefits';
 import WhyUs from './components/Sections/WhyUs';
 import Contact from './components/Sections/Contact';
 import Footer from './components/Layout/Footer';
+import Pricing from './components/Sections/Pricing';
 
 const App: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const App: React.FC = () => {
       <main>
         <Hero />
         <Services />
+        <Pricing />
         <Products />
         <Portfolio />
         <Clients />

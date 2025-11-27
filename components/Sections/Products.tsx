@@ -28,10 +28,15 @@ const Products: React.FC = () => {
             {/* Hover Gradient */}
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-            {/* Status Badge */}
+            {/* Header: Logo and Status */}
             <div className="flex justify-between items-start mb-8 relative z-10">
-              <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center border border-gray-100 group-hover:border-emerald-200 transition-colors">
-                <div className={`w-3 h-3 rounded-full ${product.status === 'Live' ? 'bg-emerald-500' : 'bg-amber-500'} animate-pulse`} />
+              {/* Product Logo */}
+              <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center border border-gray-100 shadow-sm group-hover:border-emerald-200 transition-colors p-2 overflow-hidden">
+                {product.logoUrl ? (
+                  <img src={product.logoUrl} alt={product.title} className="w-full h-full object-contain rounded-lg" />
+                ) : (
+                  <div className={`w-3 h-3 rounded-full ${product.status === 'Live' ? 'bg-emerald-500' : 'bg-amber-500'} animate-pulse`} />
+                )}
               </div>
 
               <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border backdrop-blur-sm ${

@@ -12,6 +12,7 @@ export interface ProductItem {
   title: string;
   status: 'Under Development' | 'Private Beta' | 'Live';
   description: string;
+  logoUrl?: string;
 }
 
 export interface PortfolioItem {
@@ -56,4 +57,14 @@ export interface BenefitItem {
   title: string;
   description: string;
   icon: LucideIcon;
+}
+
+export interface PricingItem {
+  id: string;
+  title: string;
+  price: string;
+  description: string;
+  features: string[];
+  buttonText: string;
+  popular?: boolean;
 }

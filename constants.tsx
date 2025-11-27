@@ -18,7 +18,7 @@ import {
   BarChart3,
   Workflow
 } from 'lucide-react';
-import { ServiceItem, ProductItem, PortfolioItem, TestimonialItem, ValuePropItem, ClientLogo, RiskItem, BenefitItem } from './types';
+import { ServiceItem, ProductItem, PortfolioItem, TestimonialItem, ValuePropItem, ClientLogo, RiskItem, BenefitItem, PricingItem } from './types';
 
 export const NAV_LINKS = [
   { label: 'Services', href: '#services' },
@@ -85,12 +85,14 @@ export const PRODUCTS: ProductItem[] = [
     title: 'Assetra',
     status: 'Private Beta',
     description: 'A smart digital asset & document management platform designed for enterprise efficiency and security.',
+    logoUrl: 'https://i.ibb.co/3y569H98/Assetra-Owl.jpg'
   },
   {
     id: 'trustfolio',
     title: 'Trustfolio',
     status: 'Under Development',
     description: 'AI-powered testimonial collection and automated branding system to build social proof effortlessly.',
+    logoUrl: 'https://i.ibb.co/FkrYFdGC/Trustfolio-logo.png'
   },
 ];
 
@@ -226,5 +228,60 @@ export const DIGITAL_BENEFITS: BenefitItem[] = [
     title: 'Automated Efficiency',
     description: 'Reduce human error and operational costs by automating repetitive tasks, freeing your team to focus on growth.',
     icon: Workflow
+  }
+];
+
+export const PRICING_PACKAGES: PricingItem[] = [
+  {
+    id: 'starter',
+    title: 'Starter Website',
+    price: '₹4,999',
+    description: 'Best for small businesses, freelancers, simple online presence.',
+    features: [
+      'One-page modern, responsive website',
+      'Hero, About, Services, Contact sections',
+      'WhatsApp chat integration',
+      'Lead capture form',
+      'Basic SEO (title, meta tags)',
+      '2 design revisions',
+      'Delivery: 2–3 days'
+    ],
+    buttonText: 'Get Started'
+  },
+  {
+    id: 'business',
+    title: 'Business Website',
+    price: '₹14,999',
+    description: 'Best for growing businesses, agencies, service providers.',
+    popular: true,
+    features: [
+      '4–6 page website',
+      'Custom professional UI design',
+      'Fully responsive',
+      'Portfolio or gallery section',
+      'WhatsApp + Email lead integration',
+      'Enhanced SEO structure',
+      'Basic animations',
+      '3 design revisions',
+      'Delivery: 5–7 days'
+    ],
+    buttonText: 'Build My Website'
+  },
+  {
+    id: 'premium',
+    title: 'Premium / Custom',
+    price: '₹29,999+',
+    description: 'Best for Brands needing advanced custom websites.',
+    features: [
+      'Fully custom multi-page website',
+      'Advanced UI/UX',
+      'Blog or CMS integration (optional)',
+      'Custom animations & micro-interactions',
+      'Integrations (API, CRM, automations)',
+      'Full SEO structure',
+      'High-performance optimization',
+      'Priority support'
+    ],
+    buttonText: 'Request Quote'
   }
 ];
