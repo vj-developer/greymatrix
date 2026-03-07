@@ -23,8 +23,8 @@ const Portfolio: React.FC = () => {
             A showcase of digital products that drive results.
           </p>
         </div>
-        <a 
-          href="#contact" 
+        <a
+          href="#contact"
           onClick={(e) => handleScrollToSection(e, '#contact')}
           className="hidden md:flex items-center gap-2 text-sm font-semibold text-gray-900 border-b border-gray-200 pb-1 hover:border-emerald-500 hover:text-emerald-600 transition-all"
         >
@@ -34,8 +34,8 @@ const Portfolio: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
         {PORTFOLIO.map((project) => (
-          <a 
-            key={project.id} 
+          <a
+            key={project.id}
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
@@ -43,13 +43,16 @@ const Portfolio: React.FC = () => {
           >
             {/* Image Frame Container */}
             <div className="relative overflow-hidden rounded-2xl aspect-[16/10] mb-6 shadow-sm border border-gray-100 group-hover:shadow-xl group-hover:shadow-emerald-900/5 transition-all duration-500 group-hover:-translate-y-1 bg-gray-50 p-6 md:p-8 flex items-center justify-center">
-              
+
               {/* Hover Background Accent */}
               <div className="absolute inset-0 bg-gradient-to-tr from-emerald-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
+
               {/* Image */}
               <img
-                src={project.imageUrl}
+                src={
+                  project.imageUrl ||
+                  `https://api.microlink.io/?url=${encodeURIComponent(project.link)}&screenshot=true&meta=false&embed=screenshot.url`
+                }
                 alt={project.title}
                 className="w-full h-full object-contain relative z-10 drop-shadow-md rounded-lg transition-transform duration-700 group-hover:scale-105"
               />
@@ -61,10 +64,10 @@ const Portfolio: React.FC = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="flex flex-col px-1">
               <div className="flex justify-between items-start mb-2">
-                 <h3 className="text-2xl font-bold text-gray-900 group-hover:text-emerald-700 transition-colors font-heading">
+                <h3 className="text-2xl font-bold text-gray-900 group-hover:text-emerald-700 transition-colors font-heading">
                   {project.title}
                 </h3>
                 <span className="text-xs font-semibold px-2.5 py-1 bg-gray-100 rounded-md text-gray-600 uppercase tracking-wide border border-gray-200">
@@ -78,16 +81,16 @@ const Portfolio: React.FC = () => {
           </a>
         ))}
       </div>
-      
-       <div className="mt-8 md:hidden text-center">
-        <a 
-          href="#contact" 
+
+      <div className="mt-8 md:hidden text-center">
+        <a
+          href="#contact"
           onClick={(e) => handleScrollToSection(e, '#contact')}
           className="inline-flex items-center gap-2 text-sm font-semibold text-gray-900 border-b border-gray-200 pb-1 hover:border-emerald-500 hover:text-emerald-600 transition-all"
         >
-            Start your project <ArrowUpRight size={16} />
-          </a>
-       </div>
+          Start your project <ArrowUpRight size={16} />
+        </a>
+      </div>
     </SectionWrapper>
   );
 };

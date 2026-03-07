@@ -98,12 +98,22 @@ export const PRODUCTS: ProductItem[] = [
 
 export const PORTFOLIO: PortfolioItem[] = [
   {
+    id: 'manam',
+    title: "Manam Photography",
+    category: 'Portfolio / Booking',
+    description: 'A sleek, artistic portfolio and booking website for a Wedding photography studio, optimized for lead generation.',
+    imageUrl: 'https://iili.io/qxyDbz7.png', 
+    link: 'https://manamphotography.in/',
+    devlink: 'https://manam.netlify.app/'
+  },
+  {
     id: 'naas',
     title: 'Naas Al Hayat Trading LLC',
     category: 'Corporate / FMCG',
     description: 'A comprehensive corporate website for a leading Abu Dhabi-based trading company, focusing on product cataloging and B2B lead generation.',
-    imageUrl: 'https://i.ibb.co/tPB66ZCX/naasalhayat.png', 
-    link: 'https://naasalhayat.netlify.app/'
+    imageUrl: null, 
+    link: 'https://naasalhayat.com/',
+    devlink: 'https://naasalhayat.netlify.app/'
   },
   {
     id: 'skiddi',
@@ -126,7 +136,7 @@ export const PORTFOLIO: PortfolioItem[] = [
     title: 'MentorHints',
     category: 'EdTech Platform',
     description: 'A clean, accessible mentorship and knowledge-sharing platform connecting industry experts with aspiring professionals.',
-    imageUrl: 'https://i.ibb.co/MycSLz0X/mentorhints.png', 
+    imageUrl: null, 
     link: 'https://mentorhints.netlify.app/'
   },
 ];

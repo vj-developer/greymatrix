@@ -22,6 +22,7 @@ export interface PortfolioItem {
   description: string;
   imageUrl: string;
   link: string;
+  devlink?: string;
 }
 
 export interface ClientLogo {
